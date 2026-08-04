@@ -1,6 +1,6 @@
 [package]
 name = "armature-openapi"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 rust-version = "1.94.1"
 authors = ["Joseph Quinn <quinn.josephr@proton.me>"]
@@ -12,7 +12,7 @@ keywords = ["openapi", "swagger", "api", "documentation"]
 categories = ["web-programming", "api-bindings"]
 
 [dependencies]
-armature-core = { version = "0" }
+armature-core = { version = "0.8" }
 
 # Serialization
 serde = { version = "1.0", features = ["derive"] }
