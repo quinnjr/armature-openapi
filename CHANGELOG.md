@@ -9,6 +9,17 @@ Earlier changes are recorded in the workspace [`CHANGELOG.md`](../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Security
+
+- Swagger UI assets are now pinned to `swagger-ui-dist` 5.33.1 (was 5.10.0)
+  and loaded with Subresource Integrity (`integrity="sha384-..."`,
+  `crossorigin="anonymous"`), so a tampered or substituted CDN file is refused
+  by the browser. The pinned version is exposed as `SWAGGER_UI_VERSION`.
+- The Swagger UI page title is now HTML-escaped.
+- Replaced the deprecated `serde_yaml` (and its unmaintained `unsafe-libyaml`
+  backend, RUSTSEC-2024-0449) with the maintained `serde_norway` fork. YAML
+  output of `SwaggerConfig::spec_yaml` / `spec_yaml_response` is unchanged.
+
 ## [0.4.0] - 2026-09-15
 
 ### Changed
